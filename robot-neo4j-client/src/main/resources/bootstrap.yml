@@ -1,0 +1,34 @@
+#端口配置
+server:
+  port: 8009
+spring:
+  application:
+    name: neo4j-client
+#  cloud:
+#    nacos:
+#      discovery:
+##        namespace: 35afc893-82bf-47d5-ac4a-84c05d1ba403
+#        namespace: d95370c1-dded-475e-96cb-bee9c25192e0
+#        server-addr: 10.5.24.28:8848
+#      config:
+##        namespace: 35afc893-82bf-47d5-ac4a-84c05d1ba403
+#        namespace: d95370c1-dded-475e-96cb-bee9c25192e0
+#        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+#        file-extension: yml
+#        shared-dataids: ${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+#        refreshable-dataids: ${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+  profiles:
+    active: test
+  data:
+    neo4j:
+      uri: http://10.5.27.50:7474
+      username: neo4j
+      password: graph
+      db1:
+        uri: http://10.5.27.50:7474
+        username: neo4j
+        password: graph
+      db2:
+        uri: http://10.5.27.50:7474
+        username: neo4j
+        password: graph
